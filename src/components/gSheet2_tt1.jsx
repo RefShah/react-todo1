@@ -127,7 +127,7 @@ class GSheet1 extends React.Component {
           } */}
         </div>
         <div className="todoListMain">
-          <Container className="mainContainer">
+          <Container fluid className="mainContainer">
             <Row>
               <Col className="leftCol">
                 <div className="header notesBody">
