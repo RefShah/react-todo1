@@ -1,0 +1,109 @@
+import React from "react";
+import ReactDOM from "react-dom";
+
+class NameForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {value: ''};
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+
+  handleSubmit(event) {
+    alert('A name was submitted: ' + this.state.value);
+    event.preventDefault();
+  }
+
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <label>
+          Name:
+          <input type="text" value={this.state.value} onChange={this.handleChange} />
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
+    );
+  }
+}
+
+class Select1 extends React.Component {
+  constructor(props) {
+    super(props);
+    this.inputBox = React.createRef();
+    this.numberComponent = React.createRef();
+  }
+
+  render() {
+    console.log(this.inputBox);
+    console.log(this.numberComponent);
+    alert('A name was submitted: ' + this.numberComponent);
+    return (
+      <div>
+        <input />
+        <hr />
+        <input ref={this.inputBox} />
+        <hr />
+        <Number number={1} ref={this.numberComponent} />
+      </div>
+    );
+  }
+}
+
+class Number extends React.Component {
+  render() {
+    return <div>{this.props.number}</div>;
+  }
+}
+
+class SelNList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.editor = React.createRef();
+    this.state = { text: '' };
+  }
+
+  render() {
+    return (
+      <div>
+        <textarea
+          ref={this.editor}
+          value={this.state.text}
+          onChange={e => this.setState({ text: e.target.value })}
+        />
+        <button
+          onClick={() => {
+            const textareaElem = this.editor.current;
+            const selectionStart = textareaElem.selectionStart;
+            const selectionEnd = textareaElem.selectionEnd;
+            if (selectionStart === selectionEnd) {
+              // no selection, just concat
+              this.setState({ text: this.state.text + 'Hello World' });
+            } else {
+              this.setState({
+                text:
+                  this.state.text.slice(0, selectionStart) +
+                  'Hello World' +
+                  this.state.text.slice(selectionEnd)
+              });
+              alert('A name was submitted: ' + this.state.text.slice(selectionStart, selectionEnd));
+            }
+            textareaElem.focus();
+          }}
+        >
+          Insert
+        </button>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(
+  
+  <SelNList />, document.getElementById('root')
+);
