@@ -5,7 +5,7 @@ body {
   width: 100%;
 }
 .react-grid-layout {
-  background: #0ee;
+  background: #dcdcdc;
   margin-top: 10px;
 }
 .layoutJSON {
@@ -21,7 +21,7 @@ body {
 }
 .react-grid-item {
   box-sizing: border-box;
-  background: #000;
+  /* background: #000; */
   margin: auto;
   width: 50%;
 }
@@ -38,13 +38,81 @@ body {
   background: #0ce;
   border-radius: 3px;
   text-align: center;
-  margin: auto;
-  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .react-grid-item.s1 {
   background: #f00;
   color: white;
   border-radius: 3px;
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
+}
+.react-grid-item.SS {
+  background: pink;
+  color: black;
+  border-radius: 3px;
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
+}
+.react-grid-item.Bio {
+  background: rgb(255, 221, 102);
+  color: black;
+  border-radius: 3px;
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
+}
+.react-grid-item.EMaths {
+  background: rgb(204, 255, 204);
+  color: black;
+  border-radius: 3px;
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
+}
+.react-grid-item.AMaths {
+  background: rgb(153, 224, 153);
+  color: black;
+  border-radius: 3px;
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
+}
+.react-grid-item.Makan {
+  background: rgb(255, 249, 227);
+  color: black;
+  border-radius: 3px;
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
+}
+.react-grid-item.ChemL {
+  background: rgb(255, 204, 0);
+  color: black;
+  border-radius: 3px;
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
+}
+/* .react-grid-item.Bio {
+  background: rgb(255, 221, 102);
+  color: black;
+  border-radius: 3px;
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
+} */
+.react-grid-item.Malay {
+  background: rgb(255, 204, 153);
+  color: black;
+  border-radius: 3px;
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
 }
 .react-grid-item .text {
   /* font-size: 24px; */
