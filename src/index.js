@@ -5,8 +5,10 @@ import reportWebVitals from "./reportWebVitals";
 import 'bootstrap/dist/css/bootstrap.css';
 // import PostIt1 from './components/postIt1'
 import GSheet1 from './components/gSheet1'
-// import GSheet2 from './components/gSheet2'
+// import GSheet2 from './components/gSheet2' 
 import GSheet2 from './components/gSheet2_tt1'
+import NoDraggingLayout from './components/gSheet2_tt2_RGL'
+import MyFirstGrid from './components/gSheet2_tt3_RGL'
 import ToDo1 from './components/ToDo1'
 import ToDo2 from './components/ToDo2'
 import PieceForm from './components/PieceForm'
@@ -54,10 +56,11 @@ const Wrapper = styled.section`
 ReactDOM.render(
   <React.StrictMode>
     {/* <ToDo2 /> */}
-    <GSheet2 />
+    {/* <GSheet2 /> */}
+    <MyFirstGrid />
     {/* <PieceNote noteContent={"note.noteContent"} 
                   /> */}
-  {/* <Draggable>
+  {/* <Draggable> 
     <Title>
       Hello World!
     </Title>
