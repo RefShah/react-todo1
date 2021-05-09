@@ -70,9 +70,9 @@ body {
   background: rgb(204, 255, 204);
   color: black;
   border-radius: 3px;
-  outline: none;
+  /* outline: none;
   border-color: #9ecaed;
-  box-shadow: 0 0 10px #9ecaed;
+  box-shadow: 0 0 10px #9ecaed; */
 }
 .react-grid-item.AMaths {
   background: rgb(153, 224, 153);
@@ -113,6 +113,40 @@ body {
   outline: none;
   border-color: #9ecaed;
   box-shadow: 0 0 10px #9ecaed;
+}
+.react-grid-item.PE {
+  background: white;
+  color: black;
+  border-radius: 3px;
+  /* outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed; */
+}
+.react-grid-item.Hist {
+  background: red;
+  color: black;
+  border-radius: 3px;
+  /* outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed; */
+}
+.react-grid-item.Mon {
+  /* background: red;
+  color: black; */
+  border-radius: 3px;
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
+}
+.react-grid-item.Monday {
+  /* background: red;
+  color: black; */
+  border-radius: 3px;
+  /* outline: none; */
+  /* border-color: #9ecaed; */
+  box-shadow: 0 0 10px #9ecaed;
+  border:2px dashed red;  
+  padding:0.03em 0.25em;
 }
 .react-grid-item .text {
   /* font-size: 24px; */

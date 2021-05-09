@@ -29,9 +29,9 @@ export default class MyFirstGrid extends React.Component {
   getClass(key) {
     var temp = "";
     //some code to return className
-    // if (key.includes("Mon")) {
-    //   temp = temp + "Mon ";
-    // };
+    if (key.includes("Monday") && this.state.dow == 0) {
+      temp = temp + "Monday ";
+    };
     // if (key.includes("SS")) {
     //   temp = temp + "SS ";
     // };
@@ -95,7 +95,7 @@ render() {
         <div key="l" className={this.getClass('j')} data-grid={{x: 0, y: 12, w: 1, h: 1, static: true}}>jT</div>
         <div key="m" className={this.getClass('j')} data-grid={{x: 0, y: 13, w: 1, h: 1, static: true}}>3:00pm</div>
 
-        <div key="moT" data-grid={{x: 1, y: 0, w: 1, h: 1, static: true}}>mo</div>
+        <div key="moT" className={this.getClass('Monday')} data-grid={{x: 1, y: 0, w: 1, h: 1, static: true}}>mo</div>
         <div key="a1" className={this.getClass('Mon SS')} data-grid={{x: 1, y: 1, w: 1, h: 1, static: true}}>Social Studies</div>
         {/* <div key="b1" data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}>boM</div> */}
         {/* <div key="c1" data-grid={{x: 1, y: 4, w: 5, h: 1, static: true}}>coM</div>
@@ -114,11 +114,27 @@ render() {
         <div key="j1" className={this.getClass('Mon Malay')} data-grid={{x: 1, y: 13, w: 1, h: 1, static: true}}>Higher Malay</div>
 
         <div key="tuT" data-grid={{x: 2, y: 0, w: 1, h: 1, static: true}}>tu</div>
-        <div key="a2" data-grid={{x: 2, y: 1, w: 1, h: 2, static: true}}>aT</div>
-        <div key="b2" data-grid={{x: 2, y: 3, w: 1, h: 1, static: true}}>bT</div>
+        {/* <div key="a2" data-grid={{x: 2, y: 1, w: 1, h: 2, static: true}}>aT</div>
+        <div key="b2" data-grid={{x: 2, y: 3, w: 1, h: 1, static: true}}>bT</div> */}
         {/* <div key="c2" data-grid={{x: 2, y: 3, w: 5, h: 1, static: true}}>c</div> */}
-        <div key="d2" data-grid={{x: 2, y: 5, w: 1, h: 1, static: true}}>dT</div>
+        {/* <div key="d2" data-grid={{x: 2, y: 5, w: 1, h: 1, static: true}}>dT</div>
         <div key="e2" data-grid={{x: 2, y: 6, w: 1, h: 1, static: true}}>eT</div>
+
+        <div key="thT" data-grid={{x: 4, y: 0, w: 1, h: 1, static: true}}>th</div>
+        <div key="a4" data-grid={{x: 4, y: 1, w: 1, h: 1, static: true}}>aT</div>
+        <div key="b4" data-grid={{x: 4, y: 2, w: 1, h: 1, static: true}}>bT</div> */}
+        {/* <div key="c2" data-grid={{x: 2, y: 3, w: 5, h: 1, static: true}}>c</div> */}
+        {/* <div key="d4" data-grid={{x: 4, y: 3, w: 1, h: 1, static: true}}>dT</div>
+        <div key="e4" data-grid={{x: 4, y: 5, w: 1, h: 1, static: true}}>eT</div> */}
+        <div key="a2" className={this.getClass('Even Tue PE')} data-grid={{x: 2, y: 1, w: 1, h: 1, static: true}}>Physical 
+        Ed</div>
+        <div key="b2" className={this.getClass('Even Tue EMaths')} data-grid={{x: 2, y: 2, w: 1, h: 2, static: true}}>Mathematics</div>
+        {/* <div key="c2" data-grid={{x: 2, y: 3, w: 5, h: 1, static: true}}>c</div> */}
+        <div key="d2" className={this.getClass('Even Tue SS')} data-grid={{x: 2, y: 5, w: 1, h: 1, static: true}}>Social Studies</div>
+        <div key="e2" className={this.getClass('Even Tue Hist')} data-grid={{x: 2, y: 6, w: 1, h: 2, static: true}}>History</div>
+        <div key="f2" className={this.getClass('Even Tue Mon Makan')} data-grid={{x: 2, y: 8, w: 1, h: 1, static: true}}>LUNCH</div>
+        {/* <div key="g2" className={this.getClass('Mon ChemL')} data-grid={{x: 2, y: 10, w: 1, h: 1, static: true}}>Chemistry (Lab)</div> */}
+        <div key="h2" className={this.getClass('Even Tue BioL')} data-grid={{x: 2, y: 10, w: 1, h: 2, static: true}}>Biology (Lab)</div>
 
         <div key="thT" data-grid={{x: 4, y: 0, w: 1, h: 1, static: true}}>th</div>
         <div key="a4" data-grid={{x: 4, y: 1, w: 1, h: 1, static: true}}>aT</div>
@@ -126,6 +142,7 @@ render() {
         {/* <div key="c2" data-grid={{x: 2, y: 3, w: 5, h: 1, static: true}}>c</div> */}
         <div key="d4" data-grid={{x: 4, y: 3, w: 1, h: 1, static: true}}>dT</div>
         <div key="e4" data-grid={{x: 4, y: 5, w: 1, h: 1, static: true}}>eT</div>
+
 
         <div key="weT" data-grid={{x: 3, y: 0, w: 1, h: 1, static: true}}>we</div>
         <div key="a3" data-grid={{x: 3, y: 1, w: 1, h: 1, static: true}}>aW</div>
