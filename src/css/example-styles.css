@@ -22,20 +22,29 @@ body {
 .react-grid-item {
   box-sizing: border-box;
   background: #000;
+  margin: auto;
+  width: 50%;
 }
 .react-grid-item:not(.react-grid-placeholder) {
   background: #000;
   border: 1px solid black;
+  margin: auto;
+  width: 50%;
 }
 .react-grid-item.resizing {
   opacity: 0.9;
 }
 .react-grid-item.static {
   background: #0ce;
+  border-radius: 3px;
+  text-align: center;
+  margin: auto;
+  width: 50%;
 }
 .react-grid-item.s1 {
   background: #f00;
   color: white;
+  border-radius: 3px;
 }
 .react-grid-item .text {
   /* font-size: 24px; */

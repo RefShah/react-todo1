@@ -30,7 +30,7 @@ export default class MyFirstGrid extends React.Component {
     ];
     return (
       <div style={{transform: 'scale(0.75) translate(-10%, -10%)'}}>
-      <ReactGridLayout className="layout" cols={12} rowHeight={30} width={1200}>
+      <ReactGridLayout className="layout" cols={6} rowHeight={30} width={1200}>
         <div key="0T" data-grid={{x: 0, y: 0, w: 1, h: 1, static: true}}>T</div>
         <div key="a" data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}>aT</div>
         <div key="b" data-grid={{x: 0, y: 2, w: 1, h: 1, static: true}}>bT</div>
@@ -49,6 +49,8 @@ export default class MyFirstGrid extends React.Component {
         <div key="c1" data-grid={{x: 1, y: 4, w: 5, h: 1, static: true}}>cM</div>
         <div key="d1" data-grid={{x: 1, y: 5, w: 1, h: 1, static: true}}>dM</div>
         <div key="e1" data-grid={{x: 1, y: 6, w: 1, h: 1, static: true}}>eM</div>
+        <div key="f1" data-grid={{x: 1, y: 7, w: 1, h: 2, static: true}}>dM</div>
+        <div key="g1" data-grid={{x: 1, y: 9, w: 1, h: 1, static: true}}>eM</div>
 
         <div key="tuT" data-grid={{x: 2, y: 0, w: 1, h: 1, static: true}}>tu</div>
         <div key="a2" data-grid={{x: 2, y: 1, w: 1, h: 2, static: true}}>aT</div>
