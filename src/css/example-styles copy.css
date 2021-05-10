@@ -25,16 +25,9 @@ body {
   margin: auto;
   width: 50%;
 }
-.react-grid-item.isToday {
+.react-grid-item:not(.react-grid-placeholder) {
   background: #000;
   border: 1px solid black;
-  margin: auto;
-  width: 50%;
-}
-
-.react-grid-item:not(.react-grid-placeholder) { /* kind of default */
-  background: #000;
-  /* border: 1px solid black; */ 
   margin: auto;
   width: 50%;
 }
@@ -57,36 +50,22 @@ body {
   border-color: #9ecaed;
   box-shadow: 0 0 10px #9ecaed;
 }
-.react-grid-item.Eng {
-  background: rgb(153, 204, 255);
-  /* color: red; */
-  /* color: hsl(0, 100%, 25%); */
-  border-radius: 3px;
-  /* outline: none;
-  border-color: #9ecaed;
-  box-shadow: 0 0 10px #9ecaed; */
-}
 .react-grid-item.SS {
   background: pink;
   /* color: red; */
   color: hsl(0, 100%, 25%);
   border-radius: 3px;
-  /* outline: none;
+  outline: none;
   border-color: #9ecaed;
-  box-shadow: 0 0 10px #9ecaed; */
+  box-shadow: 0 0 10px #9ecaed;
 }
 .react-grid-item.Bio {
   background: rgb(255, 221, 102);
   color: black;
   border-radius: 3px;
-  /* outline: none;
+  outline: none;
   border-color: #9ecaed;
-  box-shadow: 0 0 10px #9ecaed; */
-}
-.react-grid-item.BioL {
-  background: rgb(255, 213, 128);
-  color: black;
-  border-radius: 3px;
+  box-shadow: 0 0 10px #9ecaed;
 }
 .react-grid-item.EMaths {
   background: rgb(204, 255, 204);
@@ -100,9 +79,9 @@ body {
   background: rgb(153, 224, 153);
   color: black;
   border-radius: 3px;
-  /* outline: none;
+  outline: none;
   border-color: #9ecaed;
-  box-shadow: 0 0 10px #9ecaed; */
+  box-shadow: 0 0 10px #9ecaed;
 }
 .react-grid-item.Makan {
   background: rgb(255, 249, 227);
@@ -116,22 +95,33 @@ body {
   background: rgb(255, 204, 0);
   color: black;
   border-radius: 3px;
-  /* outline: none;
+  outline: none;
   border-color: #9ecaed;
-  box-shadow: 0 0 10px #9ecaed; */
+  box-shadow: 0 0 10px #9ecaed;
 }
+/* .react-grid-item.Bio {
+  background: rgb(255, 221, 102);
+  color: black;
+  border-radius: 3px;
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
+} */
 .react-grid-item.Malay {
   background: rgb(255, 204, 153);
   color: black;
   border-radius: 3px;
-  /* outline: none;
+  outline: none;
   border-color: #9ecaed;
-  box-shadow: 0 0 10px #9ecaed; */
+  box-shadow: 0 0 10px #9ecaed;
 }
 .react-grid-item.PE {
   background: white;
   color: blue;
   border-radius: 3px;
+  /* outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed; */
 }
 .react-grid-item.Hist {
   /* background: red; */
@@ -145,27 +135,19 @@ body {
 .react-grid-item.Mon {
   /* background: red;
   color: black; */
-  /* border-radius: 3px; */
-  /* outline: none;
-  border-color: #9ecaed;
-  box-shadow: 0 0 10px #9ecaed; */
-}
-.react-grid-item.isToday {
-  /* background: red;
-  color: black; */
   border-radius: 3px;
-  /* outline: none;
+  outline: none;
   border-color: #9ecaed;
-  box-shadow: 0 0 10px #9ecaed; */
+  box-shadow: 0 0 10px #9ecaed;
 }
 .react-grid-item.Monday {
-  /* background: red; 
+  /* background: red;
   color: black; */
   border-radius: 3px;
   /* outline: none; */
   /* border-color: #9ecaed; */
-  /* box-shadow: 0 0 10px #9ecaed; */
-  /* border:2px dashed red;   */
+  box-shadow: 0 0 10px #9ecaed;
+  border:2px dashed red;  
   padding:0.03em 0.25em;
 }
 .react-grid-item.notToday {
@@ -189,7 +171,6 @@ body {
   transform:rotate(-1deg);
   opacity:0.5;
   border-radius:0.25em;
-  /* border: 1px solid black; */
 }
 .react-grid-item.pastTime {
   /* background: red;
