@@ -52,7 +52,8 @@ body {
 }
 .react-grid-item.SS {
   background: pink;
-  color: black;
+  /* color: red; */
+  color: hsl(0, 100%, 25%);
   border-radius: 3px;
   outline: none;
   border-color: #9ecaed;
@@ -116,14 +117,15 @@ body {
 }
 .react-grid-item.PE {
   background: white;
-  color: black;
+  color: blue;
   border-radius: 3px;
   /* outline: none;
   border-color: #9ecaed;
   box-shadow: 0 0 10px #9ecaed; */
 }
 .react-grid-item.Hist {
-  background: red;
+  /* background: red; */
+  background: hsl(0, 100%, 65%);
   color: black;
   border-radius: 3px;
   /* outline: none;
@@ -147,6 +149,50 @@ body {
   box-shadow: 0 0 10px #9ecaed;
   border:2px dashed red;  
   padding:0.03em 0.25em;
+}
+.react-grid-item.notToday {
+  /* background: red;
+  color: black; */
+  border-radius: 3px;
+  /* outline: none; */
+  /* border-color: #9ecaed; */
+  /* content:""; */
+  /* z-index:-1; */
+  left:0em;
+  top:0em;
+  border-width:2px;
+  border-style:solid;
+  border-color:darkblue;
+  border-left-color:transparent;
+  border-top-color:transparent;
+  position:absolute;
+  width:100%;
+  height:1em;
+  transform:rotate(-1deg);
+  opacity:0.5;
+  border-radius:0.25em;
+}
+.react-grid-item.pastTime {
+  /* background: red;
+  color: black; */
+  border-radius: 3px;
+  /* outline: none; */
+  /* border-color: #9ecaed; */
+  /* content:""; */
+  /* z-index:-1; */
+  left:0em;
+  top:0em;
+  border-width:2px;
+  border-style:solid;
+  border-color:darkblue;
+  border-left-color:transparent;
+  border-top-color:transparent;
+  position:absolute;
+  width:100%;
+  height:1em;
+  transform:rotate(-1deg);
+  opacity:0.5;
+  border-radius:0.25em;
 }
 .react-grid-item .text {
   /* font-size: 24px; */

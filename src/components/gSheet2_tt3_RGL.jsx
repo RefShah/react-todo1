@@ -18,12 +18,27 @@ export default class MyFirstGrid extends React.Component {
   constructor() {
     super();
     var today = new Date();
+    let a = [{day: 'numeric'}, {month: 'short'}, {year: 'numeric'}];
 
     console.log('tdy: ', today);
-
-    this.state = {
-      dow: today.getDay()
+    function  join(t, a, s) {
+      function format(m) {
+         let f = new Intl.DateTimeFormat('en', m);
+         return f.format(t);
+      }
+      return a.map(format).join(s);
     };
+    
+    this.state = {
+      dow: today.getDay(),
+      dateTdy: join(today, a, ' '),
+      hr: today.getHours(),
+      numTime: today.getHours() * 100 + today.getMinutes()
+    };
+
+    console.log('Tdy: ', this.state.dateTdy);
+    console.log('Hr: ', this.state.hr * 100);
+    console.log('Time: ', this.state.numTime);
   };
 
   getClass(key) {
@@ -53,7 +68,7 @@ export default class MyFirstGrid extends React.Component {
     // if (key.includes("Bio")) {
     //   temp = temp + "Bio ";
     // };
-    return key;
+    return temp + key;
     // if ((key.length == 1) || (key[0] == '0')) {
     //   return 's1'
     // }
@@ -63,7 +78,15 @@ export default class MyFirstGrid extends React.Component {
     // return 's1';
   };
 
-render() {
+  getTimeClass(key) {
+    var integer = parseInt(key, 10);
+    if (integer < this.state.numTime) {
+      return 'pastTime'
+    }
+    else return '';
+  };
+
+  render() {
     // layout is an array of objects, see the demo for more complete usage
     const layout = [
       {i: 'a', x: 0, y: 0, w: 1, h: 1, static: true},
@@ -80,20 +103,20 @@ render() {
     return (
       <div style={{transform: 'scale(0.75) translate(-10%, -10%)'}}>
       <ReactGridLayout className="layout" cols={6} rowHeight={30} width={1200}>
-        <div key="0T" className={this.getClass('0T')} data-grid={{x: 0, y: 0, w: 1, h: 1, static: true}}>T</div>
-        <div key="a" data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}>7:50am</div>
-        <div key="b" data-grid={{x: 0, y: 2, w: 1, h: 1, static: true}}>bT</div>
-        <div key="c" data-grid={{x: 0, y: 3, w: 1, h: 1, static: true}}>cT</div>
-        <div key="d" data-grid={{x: 0, y: 4, w: 1, h: 1, static: true}}>9:50am</div>
-        <div key="e" data-grid={{x: 0, y: 5, w: 1, h: 1, static: true}}>eT</div>
-        <div key="f" data-grid={{x: 0, y: 6, w: 1, h: 1, static: true}}>fT</div>
-        <div key="g" data-grid={{x: 0, y: 7, w: 1, h: 1, static: true}}>11:20am</div>
-        <div key="h" data-grid={{x: 0, y: 8, w: 1, h: 1, static: true}}>hT</div>
-        <div key="i" data-grid={{x: 0, y: 9, w: 1, h: 1, static: true}}>iT</div>
-        <div key="j" className={this.getClass('j')} data-grid={{x: 0, y: 10, w: 1, h: 1, static: true}}>1:20pm</div>
-        <div key="k" className={this.getClass('j')} data-grid={{x: 0, y: 11, w: 1, h: 1, static: true}}>jT</div>
-        <div key="l" className={this.getClass('j')} data-grid={{x: 0, y: 12, w: 1, h: 1, static: true}}>jT</div>
-        <div key="m" className={this.getClass('j')} data-grid={{x: 0, y: 13, w: 1, h: 1, static: true}}>3:00pm</div>
+        <div key="0T" className={this.getClass('0T')} data-grid={{x: 0, y: 0, w: 1, h: 1, static: true}}>{this.state.dateTdy}</div>
+        <div key="a" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}>7:50am</div>
+        <div key="b" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 2, w: 1, h: 1, static: true}}>bT</div>
+        <div key="c" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 3, w: 1, h: 1, static: true}}>cT</div>
+        <div key="d" className={this.getTimeClass('0950')} data-grid={{x: 0, y: 4, w: 1, h: 1, static: true}}>9:50am</div>
+        <div key="e" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 5, w: 1, h: 1, static: true}}>eT</div>
+        <div key="f" className={this.getTimeClass('1040')} data-grid={{x: 0, y: 6, w: 1, h: 1, static: true}}>10:40am</div>
+        <div key="g" className={this.getTimeClass('1120')} data-grid={{x: 0, y: 7, w: 1, h: 1, static: true}}>11:20am</div>
+        <div key="h" className={this.getTimeClass('1200')} data-grid={{x: 0, y: 8, w: 1, h: 1, static: true}}>12:00nn</div>
+        <div key="i" className={this.getTimeClass('1240')} data-grid={{x: 0, y: 9, w: 1, h: 1, static: true}}>12:40pm</div>
+        <div key="j" className={this.getTimeClass('1320')} data-grid={{x: 0, y: 10, w: 1, h: 1, static: true}}>1:20pm</div>
+        <div key="k" className={this.getTimeClass('1400')} data-grid={{x: 0, y: 11, w: 1, h: 1, static: true}}>2:00pm</div>
+        <div key="l" className={this.getTimeClass('1440')} data-grid={{x: 0, y: 12, w: 1, h: 1, static: true}}>2:40pm</div>
+        <div key="m" className={this.getTimeClass('1500')} data-grid={{x: 0, y: 13, w: 1, h: 1, static: true}}>3:00pm</div>
 
         <div key="moT" className={this.getClass('Monday')} data-grid={{x: 1, y: 0, w: 1, h: 1, static: true}}>mo</div>
         <div key="a1" className={this.getClass('Mon SS')} data-grid={{x: 1, y: 1, w: 1, h: 1, static: true}}>Social Studies</div>
