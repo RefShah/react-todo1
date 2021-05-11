@@ -120,6 +120,11 @@ body {
   border-color: #9ecaed;
   box-shadow: 0 0 10px #9ecaed; */
 }
+.react-grid-item.Chem {
+  background: rgb(255, 204, 0);
+  color: black;
+  border-radius: 3px;
+}
 .react-grid-item.Malay {
   background: rgb(255, 204, 153);
   color: black;
@@ -141,6 +146,11 @@ body {
   /* outline: none;
   border-color: #9ecaed;
   box-shadow: 0 0 10px #9ecaed; */
+}
+.react-grid-item.Asmb {
+  background: white;
+  color: black;
+  border-radius: 3px;
 }
 .react-grid-item.Mon {
   /* background: red;

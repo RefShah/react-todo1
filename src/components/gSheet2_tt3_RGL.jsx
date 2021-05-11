@@ -122,6 +122,12 @@ export default class MyFirstGrid extends React.Component {
     if (key.includes("Wednesday") && this.state.dow != 3) {
       temp = temp + "notToday ";
     };
+    if (key.includes("Thursday") && this.state.dow != 4) {
+      temp = temp + "notToday ";
+    };
+    if (key.includes("Friday") && this.state.dow != 5) {
+      temp = temp + "notToday ";
+    };
     if (key.includes("Mon") && this.state.dow == 1) {
       temp = temp + "isToday ";
     };
@@ -257,32 +263,32 @@ export default class MyFirstGrid extends React.Component {
         <div key="h3" className={this.getClass('Even Wed PE')} data-grid={{x: 3, y: 8, w: 1, h: 2, static: true}}>Physical Ed</div>
         <div key="i3" className={this.getClass('Even Wed Malay')} data-grid={{x: 3, y: 10, w: 1, h: 2, static: true}}>Malay</div>
 
-        <div key="thT" data-grid={{x: 4, y: 0, w: 1, h: 1, static: true}}>th</div>
+        <div key="thT" className={this.getClass('Thursday')} data-grid={{x: 4, y: 0, w: 1, h: 1, static: true}}>th</div>
         {/* <div key="a4" data-grid={{x: 4, y: 1, w: 1, h: 1, static: true}}>aT</div>
         <div key="b4" data-grid={{x: 4, y: 2, w: 1, h: 1, static: true}}>bT</div> */}
         {/* <div key="c2" data-grid={{x: 2, y: 3, w: 5, h: 1, static: true}}>c</div> */}
         {/* <div key="d4" data-grid={{x: 4, y: 3, w: 1, h: 1, static: true}}>dT</div>
         <div key="e4" data-grid={{x: 4, y: 5, w: 1, h: 1, static: true}}>eT</div> */}
-        <div key="a4" data-grid={{x: 4, y: 1, w: 1, h: 1, static: true}}>CCE</div>
-        <div key="b4" data-grid={{x: 4, y: 2, w: 1, h: 1, static: true}}>Assembly</div>
+        <div key="a4" className={this.getClass('Even Thu Malay')} data-grid={{x: 4, y: 1, w: 1, h: 1, static: true}}>CCE</div>
+        <div key="b4" className={this.getClass('Even Thu Malay')} data-grid={{x: 4, y: 2, w: 1, h: 1, static: true}}>Assembly</div>
         {/* <div key="c2" data-grid={{x: 2, y: 3, w: 5, h: 1, static: true}}>c</div> */}
-        <div key="d4" data-grid={{x: 4, y: 3, w: 1, h: 1, static: true}}>Mathematics</div>
-        <div key="e4" data-grid={{x: 4, y: 5, w: 1, h: 1, static: true}}>Chemistry</div>
-        <div key="f4" data-grid={{x: 4, y: 6, w: 1, h: 2, static: true}}>Add Maths</div>
-        <div key="g4" data-grid={{x: 4, y: 8, w: 1, h: 1, static: true}}>LUNCH</div>
-        <div key="h4" data-grid={{x: 4, y: 9, w: 1, h: 2, static: true}}>English</div>
+        <div key="d4" className={this.getClass('Even Thu EMaths')} data-grid={{x: 4, y: 3, w: 1, h: 1, static: true}}>Mathematics</div>
+        <div key="e4" className={this.getClass('Even Thu Chem')} data-grid={{x: 4, y: 5, w: 1, h: 1, static: true}}>Chemistry</div>
+        <div key="f4" className={this.getClass('Even Thu AMaths')} data-grid={{x: 4, y: 6, w: 1, h: 2, static: true}}>Add Maths</div>
+        <div key="g4" className={this.getClass('Even Thu Makan')} data-grid={{x: 4, y: 8, w: 1, h: 1, static: true}}>LUNCH</div>
+        <div key="h4" className={this.getClass('Even Thu Eng')} data-grid={{x: 4, y: 9, w: 1, h: 2, static: true}}>English</div>
 
-        <div key="frT" data-grid={{x: 5, y: 0, w: 1, h: 1, static: true}}>fr</div>
+        <div key="frT" className={this.getClass('Friday')} data-grid={{x: 5, y: 0, w: 1, h: 1, static: true}}>fr</div>
         {/* <div key="a5" data-grid={{x: 5, y: 1, w: 1, h: 2, static: true}}>aF</div>
         <div key="b5" data-grid={{x: 5, y: 3, w: 1, h: 1, static: true}}>bF</div> */}
         {/* <div key="c2" data-grid={{x: 2, y: 3, w: 5, h: 1, static: true}}>c</div> */}
         {/* <div key="d5" data-grid={{x: 5, y: 5, w: 1, h: 1, static: true}}>dF</div>
         <div key="e5" data-grid={{x: 5, y: 6, w: 1, h: 1, static: true}}>eF</div> */}
-        <div key="a5" data-grid={{x: 5, y: 3, w: 1, h: 1, static: true}}>Malay</div>
-        <div key="b5" data-grid={{x: 5, y: 5, w: 1, h: 1, static: true}}>LUNCH</div>
+        <div key="a5" className={this.getClass('Even Fri Malay')} data-grid={{x: 5, y: 3, w: 1, h: 1, static: true}}>Malay</div>
+        <div key="b5" className={this.getClass('Even Fri Makan')} data-grid={{x: 5, y: 5, w: 1, h: 1, static: true}}>LUNCH</div>
         {/* <div key="c2" data-grid={{x: 2, y: 3, w: 5, h: 1, static: true}}>c</div> */}
-        <div key="d5" data-grid={{x: 5, y: 6, w: 1, h: 1, static: true}}>English</div>
-        <div key="e5" data-grid={{x: 5, y: 7, w: 1, h: 2, static: true}}>Chemistry</div>
+        <div key="d5" className={this.getClass('Even Fri Eng')} data-grid={{x: 5, y: 6, w: 1, h: 1, static: true}}>English</div>
+        <div key="e5" className={this.getClass('Even Fri Chem')} data-grid={{x: 5, y: 7, w: 1, h: 2, static: true}}>Chemistry</div>
       </ReactGridLayout>
       </div>    )
   }
