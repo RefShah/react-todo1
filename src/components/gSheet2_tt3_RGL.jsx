@@ -463,7 +463,7 @@ export default class MyFirstGrid extends React.Component {
           <span className={this.getClass('Odd Tue Malay')}>Malay</span>
           </ScaleText>
         </div>
-        <div key="f2" className={this.getClass('Odd Tue Mon BioL')} data-grid={{x: 2, y: 7, w: 1, h: 2, static: true}}>
+        <div key="f2" className={this.getClass('Odd Tue BioL')} data-grid={{x: 2, y: 7, w: 1, h: 2, static: true}}>
           {/* </div>
           <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
           <ScaleText maxFontSize={20}>
@@ -523,7 +523,7 @@ export default class MyFirstGrid extends React.Component {
           <span className={this.getClass('Odd Wed Chem')}>Chemistry</span>
           </ScaleText>
         </div>
-        <div key="g3" className={this.getClass('Odd Wed Mon PE')} data-grid={{x: 3, y: 7, w: 1, h: 1, static: true}}>
+        <div key="g3" className={this.getClass('Odd Wed PE')} data-grid={{x: 3, y: 7, w: 1, h: 1, static: true}}>
           {/* </div>
           <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
           <ScaleText maxFontSize={20}>
@@ -811,17 +811,77 @@ export default class MyFirstGrid extends React.Component {
           <span className={this.getClass('Time 0950')}>10:00am</span>
           </ScaleText>
         </div>
-        <div key="f" className={this.getTimeClass('1040')} data-grid={{x: 0, y: 6, w: 1, h: 1, static: true}}>10:40am</div>
-        <div key="g" className={this.getTimeClass('1120')} data-grid={{x: 0, y: 7, w: 1, h: 1, static: true}}>11:20am</div>
-        <div key="h" className={this.getTimeClass('1200')} data-grid={{x: 0, y: 8, w: 1, h: 1, static: true}}>12:00nn</div>
-        <div key="i" className={this.getTimeClass('1240')} data-grid={{x: 0, y: 9, w: 1, h: 1, static: true}}>12:40pm</div>
-        <div key="j" className={this.getTimeClass('1320')} data-grid={{x: 0, y: 10, w: 1, h: 1, static: true}}>1:20pm</div>
-        <div key="k" className={this.getTimeClass('1400')} data-grid={{x: 0, y: 11, w: 1, h: 1, static: true}}>2:00pm</div>
-        <div key="l" className={this.getTimeClass('1440')} data-grid={{x: 0, y: 12, w: 1, h: 1, static: true}}>2:40pm</div>
-        <div key="m" className={this.getTimeClass('1500')} data-grid={{x: 0, y: 13, w: 1, h: 1, static: true}}>3:00pm</div>
-        <div key="n" className={this.getTimeClass('1600')} data-grid={{x: 0, y: 14, w: 1, h: 1, static: true}}>4:00pm</div>
+        <div key="f" className={this.getTimeClass('1040')} data-grid={{x: 0, y: 6, w: 1, h: 1, static: true}}>
+          {/* 10:40am</div>
+          <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('Time 1040')}>10:40am</span>
+          </ScaleText>
+        </div>
+        <div key="g" className={this.getTimeClass('1120')} data-grid={{x: 0, y: 7, w: 1, h: 1, static: true}}>
+          {/* 11:20am</div>
+          <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('Time 1120')}>11:20am</span>
+          </ScaleText>
+        </div>
+        <div key="h" className={this.getTimeClass('1200')} data-grid={{x: 0, y: 8, w: 1, h: 1, static: true}}>
+          {/* 12:00nn</div>
+          <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('Time 1200')}>12:00nn</span>
+          </ScaleText>
+        </div>
+        <div key="i" className={this.getTimeClass('1240')} data-grid={{x: 0, y: 9, w: 1, h: 1, static: true}}>
+          {/* 12:40pm</div>
+          <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('Time 1240')}>12:40pm</span>
+          </ScaleText>
+        </div>
+        <div key="j" className={this.getTimeClass('1320')} data-grid={{x: 0, y: 10, w: 1, h: 1, static: true}}>
+          {/* </div>
+          <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('Time 1320')}>1:20pm</span>
+          </ScaleText>
+        </div>
+        <div key="k" className={this.getTimeClass('1400')} data-grid={{x: 0, y: 11, w: 1, h: 1, static: true}}>
+          {/* </div>
+          <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('Time 1400')}>2:00pm</span>
+          </ScaleText>
+        </div>
+        <div key="l" className={this.getTimeClass('1440')} data-grid={{x: 0, y: 12, w: 1, h: 1, static: true}}>
+          {/* 2:40pm</div>
+          <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('Time 1440')}>2:40pm</span>
+          </ScaleText>
+        </div>
+        <div key="m" className={this.getTimeClass('1500')} data-grid={{x: 0, y: 13, w: 1, h: 1, static: true}}>
+          {/* 3:00pm</div>
+          <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('Time 1500')}>3:00pm</span>
+          </ScaleText>
+        </div>
+        <div key="n" className={this.getTimeClass('1600')} data-grid={{x: 0, y: 14, w: 1, h: 1, static: true}}>
+          {/* 4:00pm</div>
+          <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('Time 1600')}>4:00pm</span>
+          </ScaleText>
+        </div>
 
-        <div key="moT" className={this.getClass('Monday')} data-grid={{x: 1, y: 0, w: 1, h: 1, static: true}}>Monday</div>
+        <div key="moT" className={this.getClass('Monday')} data-grid={{x: 1, y: 0, w: 1, h: 1, static: true}}>
+          {/* </div>
+          <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('Even Mon Bio')}>Monday</span>
+          </ScaleText>
+        </div>
         <div key="a1" className={this.getClass('Even Mon SS')} data-grid={{x: 1, y: 1, w: 1, h: 1, static: true}}>
           {/* </div>
           <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
@@ -851,12 +911,48 @@ export default class MyFirstGrid extends React.Component {
           <span className={this.getClass('Even Mon Makan')}>B R E A K</span>
           </ScaleText>
         </div>
-        <div key="e1" className={this.getClass('Even Mon AMaths')} data-grid={{x: 1, y: 5, w: 1, h: 1, static: true}}>Add Maths</div>
-        <div key="f1" className={this.getClass('Even Mon Makan')} data-grid={{x: 1, y: 6, w: 1, h: 1, static: true}}>LUNCH</div>
-        <div key="g1" className={this.getClass('Even Mon ChemL')} data-grid={{x: 1, y: 7, w: 1, h: 2, static: true}}>Chemistry (Lab)</div>
-        <div key="h1" className={this.getClass('Even Mon Malay')} data-grid={{x: 1, y: 9, w: 1, h: 2, static: true}}>Malay</div>
-        <div key="i1" className={this.getClass('Even Mon Bio')} data-grid={{x: 1, y: 11, w: 1, h: 2, static: true}}>Biology (m/u)</div>
-        <div key="j1" className={this.getClass('Even Mon Malay')} data-grid={{x: 1, y: 13, w: 1, h: 1, static: true}}>Higher Malay</div>
+        <div key="e1" className={this.getClass('Even Mon AMaths')} data-grid={{x: 1, y: 5, w: 1, h: 1, static: true}}>
+          {/* </div>
+          <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('Even Mon AMaths')}>Add Maths</span>
+          </ScaleText>
+        </div>
+        <div key="f1" className={this.getClass('Even Mon Makan')} data-grid={{x: 1, y: 6, w: 1, h: 1, static: true}}>
+          {/* </div>
+          <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('Even Mon Makan')}>LUNCH</span>
+          </ScaleText>
+        </div>
+        <div key="g1" className={this.getClass('Even Mon ChemL')} data-grid={{x: 1, y: 7, w: 1, h: 2, static: true}}>
+          {/* </div>
+          <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('Even Mon ChemL')}>Chemistry (Lab)</span>
+          </ScaleText>
+        </div>
+        <div key="h1" className={this.getClass('Even Mon Malay')} data-grid={{x: 1, y: 9, w: 1, h: 2, static: true}}>
+          {/* </div>
+          <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('Even Mon Malay')}>Malay</span>
+          </ScaleText>
+        </div>
+        <div key="i1" className={this.getClass('Even Mon Bio')} data-grid={{x: 1, y: 11, w: 1, h: 2, static: true}}>
+          {/* </div>
+          <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('Even Mon Bio')}>Biology (m/u)</span>
+          </ScaleText>
+        </div>
+        <div key="j1" className={this.getClass('Even Mon Malay')} data-grid={{x: 1, y: 13, w: 1, h: 1, static: true}}>
+          {/* </div>
+          <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('Even Mon Malay')}>Higher Malay</span>
+          </ScaleText>
+        </div>
 
         <div key="tuT" className={this.getClass('Tuesday')} data-grid={{x: 2, y: 0, w: 1, h: 1, static: true}}>Tuesday</div>
         {/* <div key="c2" data-grid={{x: 2, y: 3, w: 5, h: 1, static: true}}>c</div> */}
@@ -882,7 +978,13 @@ export default class MyFirstGrid extends React.Component {
         <div key="e2" className={this.getClass('Even Tue Hist')} data-grid={{x: 2, y: 6, w: 1, h: 2, static: true}}>History</div>
         <div key="f2" className={this.getClass('Even Tue Mon Makan')} data-grid={{x: 2, y: 8, w: 1, h: 1, static: true}}>LUNCH</div>
 
-        <div key="weT" className={this.getClass('Wednesday')} data-grid={{x: 3, y: 0, w: 1, h: 1, static: true}}>we</div>
+        <div key="weT" className={this.getClass('Wednesday')} data-grid={{x: 3, y: 0, w: 1, h: 1, static: true}}>
+          {/* we</div>
+          <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('Even Wed Malay')}>Wednesday</span>
+          </ScaleText>
+        </div>
         {/* <div key="c2" data-grid={{x: 2, y: 3, w: 5, h: 1, static: true}}>c</div> */}
         <div key="a3" data-grid={{x: 3, y: 1, w: 1, h: 1, static: true}}>aW</div>
         <div key="b3" className={this.getClass('Even Wed Hist')} data-grid={{x: 3, y: 2, w: 1, h: 1, static: true}}>
@@ -900,13 +1002,49 @@ export default class MyFirstGrid extends React.Component {
           <span className={this.getClass('Even Wed Eng')}>English</span>
           </ScaleText>
         </div>
-        <div key="e3" className={this.getClass('Even Wed Eng')} data-grid={{x: 3, y: 5, w: 1, h: 1, static: true}}>English</div>
-        <div key="f3" className={this.getClass('Even Wed AMaths')} data-grid={{x: 3, y: 6, w: 1, h: 1, static: true}}>Add Maths</div>
-        <div key="g3" className={this.getClass('Even Wed Mon Makan')} data-grid={{x: 3, y: 7, w: 1, h: 1, static: true}}>LUNCH</div>
-        <div key="h3" className={this.getClass('Even Wed PE')} data-grid={{x: 3, y: 8, w: 1, h: 2, static: true}}>Physical Ed</div>
-        <div key="i3" className={this.getClass('Even Wed Malay')} data-grid={{x: 3, y: 10, w: 1, h: 2, static: true}}>Malay</div>
+        <div key="e3" className={this.getClass('Even Wed Eng')} data-grid={{x: 3, y: 5, w: 1, h: 1, static: true}}>
+          {/* English</div>
+          <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('Even Wed Eng')}>English</span>
+          </ScaleText>
+        </div>
+        <div key="f3" className={this.getClass('Even Wed AMaths')} data-grid={{x: 3, y: 6, w: 1, h: 1, static: true}}>
+          {/* </div>
+          <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('Even Wed AMaths')}>Add Maths</span>
+          </ScaleText>
+        </div>
+        <div key="g3" className={this.getClass('Even Wed Mon Makan')} data-grid={{x: 3, y: 7, w: 1, h: 1, static: true}}>
+          {/* </div>
+          <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('Even Wed Makan')}>LUNCH</span>
+          </ScaleText>
+        </div>
+        <div key="h3" className={this.getClass('Even Wed PE')} data-grid={{x: 3, y: 8, w: 1, h: 2, static: true}}>
+          {/* </div>
+          <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('Even Wed PE')}>Physical Ed</span>
+          </ScaleText>
+        </div>
+        <div key="i3" className={this.getClass('Even Wed Malay')} data-grid={{x: 3, y: 10, w: 1, h: 2, static: true}}>
+          {/* </div>
+          <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('Even Wed Malay')}>Malay</span>
+          </ScaleText>
+        </div>
 
-        <div key="thT" className={this.getClass('Thursday')} data-grid={{x: 4, y: 0, w: 1, h: 1, static: true}}>th</div>
+        <div key="thT" className={this.getClass('Thursday')} data-grid={{x: 4, y: 0, w: 1, h: 1, static: true}}>
+          {/* th</div>
+          <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('Even Wed Malay')}>Thursday</span>
+          </ScaleText>
+        </div>
         {/* <div key="c2" data-grid={{x: 2, y: 3, w: 5, h: 1, static: true}}>c</div> */}
         <div key="a4" className={this.getClass('Even Thu Malay')} data-grid={{x: 4, y: 1, w: 1, h: 1, static: true}}>
           {/* </div>
@@ -980,7 +1118,84 @@ export default class MyFirstGrid extends React.Component {
           <span className={this.getClass('Time 0910')}>9:10am</span>
           </ScaleText>
         </div>
-      </ReactGridLayout>
+        <div key="dz" className={this.getTimeClass('0950')} data-grid={{x: 6, y: 4, w: 1, h: 1, static: true}}>
+          {/* </div>
+          <div key="az" className={this.getTimeClass('0750')} data-grid={{x: 6, y: 1, w: 1, h: 1, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className="Time">9:50am</span>
+          </ScaleText>
+        </div>
+        <div key="ez" className={this.getTimeClass('1000')} data-grid={{x: 6, y: 5, w: 1, h: 1, static: true}}>
+          {/* </div>
+          <div key="az" className={this.getTimeClass('0750')} data-grid={{x: 6, y: 1, w: 1, h: 1, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className="Time">10:00am</span>
+          </ScaleText>
+        </div>
+        <div key="fz" className={this.getTimeClass('1040')} data-grid={{x: 6, y: 6, w: 1, h: 1, static: true}}>
+          {/* 10:40am</div>
+          <div key="az" className={this.getTimeClass('0750')} data-grid={{x: 6, y: 1, w: 1, h: 1, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className="Time">10:40am</span>
+          </ScaleText>
+        </div>
+        <div key="gz" className={this.getTimeClass('1120')} data-grid={{x: 6, y: 7, w: 1, h: 1, static: true}}>
+          {/* </div>
+          <div key="az" className={this.getTimeClass('0750')} data-grid={{x: 6, y: 1, w: 1, h: 1, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className="Time">11:20am</span>
+          </ScaleText>
+        </div>
+        <div key="hz" className={this.getTimeClass('1200')} data-grid={{x: 6, y: 8, w: 1, h: 1, static: true}}>
+          {/* </div>
+          <div key="az" className={this.getTimeClass('0750')} data-grid={{x: 6, y: 1, w: 1, h: 1, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className="Time">12:00nn</span>
+          </ScaleText>
+        </div>
+        <div key="iz" className={this.getTimeClass('1240')} data-grid={{x: 6, y: 9, w: 1, h: 1, static: true}}>
+          {/* 12:40pm</div>
+          <div key="az" className={this.getTimeClass('0750')} data-grid={{x: 6, y: 1, w: 1, h: 1, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className="Time">12:40pm</span>
+          </ScaleText>
+        </div>
+        <div key="jz" className={this.getTimeClass('1320')} data-grid={{x: 6, y: 10, w: 1, h: 1, static: true}}>
+          {/* 1:20pm</div>
+          <div key="az" className={this.getTimeClass('0750')} data-grid={{x: 6, y: 1, w: 1, h: 1, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className="Time">1:20pm</span>
+          </ScaleText>
+        </div>
+        <div key="kz" className={this.getTimeClass('1400')} data-grid={{x: 6, y: 11, w: 1, h: 1, static: true}}>
+          {/* </div>
+          <div key="az" className={this.getTimeClass('0750')} data-grid={{x: 6, y: 1, w: 1, h: 1, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className="Time">2:00pm</span>
+          </ScaleText>
+        </div>
+        <div key="lz" className={this.getTimeClass('1440')} data-grid={{x: 6, y: 12, w: 1, h: 1, static: true}}>
+          {/* 2:40pm</div>
+          <div key="az" className={this.getTimeClass('0750')} data-grid={{x: 6, y: 1, w: 1, h: 1, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className="Time">2:40pm</span>
+          </ScaleText>
+        </div>
+        <div key="mz" className={this.getTimeClass('1500')} data-grid={{x: 6, y: 13, w: 1, h: 1, static: true}}>
+          {/* 3:00pm</div>
+          <div key="az" className={this.getTimeClass('0750')} data-grid={{x: 6, y: 1, w: 1, h: 1, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className="Time">3:00pm</span>
+          </ScaleText>
+        </div>
+        <div key="nz" className={this.getTimeClass('1600')} data-grid={{x: 6, y: 14, w: 1, h: 1, static: true}}>
+          {/* 4:00pm</div>
+          <div key="a" className={this.getTimeClass('0750')} data-grid={{x: 6, y: 1, w: 1, h: 1, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className="Time">4:00pm</span>
+          </ScaleText>
+        </div>
+      </ReactGridLayout> {/* key="ELive" className={this.getLayoutClass('Even')} */}
       <ReactGridLayout key="ONextE" className={this.getLayoutClass('Even')} cols={7} rowHeight={50} width={1200}>
         <div key="0T" data-grid={{x: 0, y: 0, w: 1, h: 1, static: true}}>Odd Week</div>
         <div key="a" className="Time" data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}>
@@ -997,7 +1212,7 @@ export default class MyFirstGrid extends React.Component {
           <span className={this.getClass('Time 0830')}>8:30am</span>
           </ScaleText>
         </div>
-        <div key="c" className={this.getTimeClass('0910')} data-grid={{x: 0, y: 3, w: 1, h: 1, static: true}}>
+        <div key="c" data-grid={{x: 0, y: 3, w: 1, h: 1, static: true}}>
           {/* 9:10am</div>
           <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
           <ScaleText maxFontSize={20}>
@@ -1011,16 +1226,40 @@ export default class MyFirstGrid extends React.Component {
           <span className={this.getClass('Time 0950')}>9:50am</span>
           </ScaleText>
         </div>
-        <div key="e" className={this.getTimeClass('1000')} data-grid={{x: 0, y: 5, w: 1, h: 1, static: true}}>10:00am</div>
-        <div key="f" className={this.getTimeClass('1040')} data-grid={{x: 0, y: 6, w: 1, h: 1, static: true}}>10:40am</div>
-        <div key="g" className={this.getTimeClass('1120')} data-grid={{x: 0, y: 7, w: 1, h: 1, static: true}}>11:20am</div>
-        <div key="h" className={this.getTimeClass('1200')} data-grid={{x: 0, y: 8, w: 1, h: 1, static: true}}>12:00nn</div>
-        <div key="i" className={this.getTimeClass('1240')} data-grid={{x: 0, y: 9, w: 1, h: 1, static: true}}>12:40pm</div>
-        <div key="j" className={this.getTimeClass('1320')} data-grid={{x: 0, y: 10, w: 1, h: 1, static: true}}>1:20pm</div>
-        <div key="k" className={this.getTimeClass('1400')} data-grid={{x: 0, y: 11, w: 1, h: 1, static: true}}>2:00pm</div>
-        <div key="l" className={this.getTimeClass('1440')} data-grid={{x: 0, y: 12, w: 1, h: 1, static: true}}>2:40pm</div>
-        <div key="m" className={this.getTimeClass('1500')} data-grid={{x: 0, y: 13, w: 1, h: 1, static: true}}>3:00pm</div>
-        <div key="n" className={this.getTimeClass('1600')} data-grid={{x: 0, y: 14, w: 1, h: 1, static: true}}>4:00pm</div>
+        <div key="e" data-grid={{x: 0, y: 5, w: 1, h: 1, static: true}}>
+          {/* 10:00am</div>
+          <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('Time 0950')}>10:00am</span>
+          </ScaleText>
+        </div>
+        <div key="f" data-grid={{x: 0, y: 6, w: 1, h: 1, static: true}}>
+          {/* 10:40am</div>
+          <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('Time 0950')}>10:40am</span>
+          </ScaleText>
+        </div>
+        <div key="g" data-grid={{x: 0, y: 7, w: 1, h: 1, static: true}}>
+          {/* 11:20am</div>
+          <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('Time 0950')}>11:20am</span>
+          </ScaleText>
+        </div>
+        <div key="h" data-grid={{x: 0, y: 8, w: 1, h: 1, static: true}}>
+          {/* 12:00nn</div>
+          <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('Time 0950')}>12:00nn</span>
+          </ScaleText>
+        </div>
+        <div key="i" data-grid={{x: 0, y: 9, w: 1, h: 1, static: true}}>12:40pm</div>
+        <div key="j" data-grid={{x: 0, y: 10, w: 1, h: 1, static: true}}>1:20pm</div>
+        <div key="k" data-grid={{x: 0, y: 11, w: 1, h: 1, static: true}}>2:00pm</div>
+        <div key="l" data-grid={{x: 0, y: 12, w: 1, h: 1, static: true}}>2:40pm</div>
+        <div key="m" data-grid={{x: 0, y: 13, w: 1, h: 1, static: true}}>3:00pm</div>
+        <div key="n" data-grid={{x: 0, y: 14, w: 1, h: 1, static: true}}>4:00pm</div>
 
         <div key="moT" className={this.getClass('Monday')} data-grid={{x: 1, y: 0, w: 1, h: 1, static: true}}>Monday</div>
         <div key="ao1" className={this.getClass('not Even Mon AMaths')} data-grid={{x: 1, y: 1, w: 1, h: 1, static: true}}>
@@ -1037,8 +1276,56 @@ export default class MyFirstGrid extends React.Component {
           <span className={this.getClass('not Even Mon Malay')}>Malay</span>
           </ScaleText>
         </div>
+        <div key="d1" className={this.getClass('not Even Mon Makan')} data-grid={{x: 1, y: 4, w: 5, h: 1, static: true}}>
+          {/* </div>
+          <div key="b1" className={this.getClass('not Even Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}>         */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('not Even Mon Makan')}>B R E A K</span>
+          </ScaleText>
+        </div>
+        <div key="e1" className={this.getClass('not Even Mon Eng')} data-grid={{x: 1, y: 5, w: 1, h: 1, static: true}}>
+          {/* </div>
+          <div key="b1" className={this.getClass('not Even Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}>         */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('not Even Mon Eng')}>English</span>
+          </ScaleText>
+        </div>
+        <div key="f1" className={this.getClass('not Even Mon Makan')} data-grid={{x: 1, y: 6, w: 1, h: 1, static: true}}>
+          {/* </div>
+          <div key="b1" className={this.getClass('not Even Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}>         */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('not Even Mon Makan')}>LUNCH</span>
+          </ScaleText>
+        </div>
+        <div key="g1" className={this.getClass('not Even Mon ChemL')} data-grid={{x: 1, y: 7, w: 1, h: 2, static: true}}>
+          {/* </div>
+          <div key="b1" className={this.getClass('not Even Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}>         */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('not Even Mon ChemL')}>Chemistry (Lab)</span>
+          </ScaleText>
+        </div>
+        <div key="h1" className={this.getClass('not Even Mon Malay')} data-grid={{x: 1, y: 9, w: 1, h: 1, static: true}}>
+          {/* </div>
+          <div key="b1" className={this.getClass('not Even Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}>         */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('not Even Mon Malay')}>CCE</span>
+          </ScaleText>
+        </div>
+        <div key="j1" className={this.getClass('not Even Mon Malay')} data-grid={{x: 1, y: 13, w: 1, h: 1, static: true}}>
+          {/* </div>
+          <div key="b1" className={this.getClass('not Even Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}>         */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('not Even Mon Malay')}>Higher Malay</span>
+          </ScaleText>
+        </div>
 
-        <div key="tuT" className={this.getClass('Tuesday')} data-grid={{x: 2, y: 0, w: 1, h: 1, static: true}}>tu</div>
+        <div key="tuT" className={this.getClass('Tuesday')} data-grid={{x: 2, y: 0, w: 1, h: 1, static: true}}>
+          {/* tu</div>
+          <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('not Even Tue EMaths')}>Tuesday</span>
+          </ScaleText>
+        </div>
         {/* <div key="c2" data-grid={{x: 2, y: 3, w: 5, h: 1, static: true}}>c</div> */}
         {/* <div key="d2" data-grid={{x: 2, y: 5, w: 1, h: 1, static: true}}>dT</div>
         <div key="e2" data-grid={{x: 2, y: 6, w: 1, h: 1, static: true}}>eT</div>
@@ -1062,11 +1349,41 @@ export default class MyFirstGrid extends React.Component {
           </ScaleText>
         </div>
         {/* <div key="c2" data-grid={{x: 2, y: 3, w: 5, h: 1, static: true}}>c</div> */}
-        <div key="d2" className={this.getClass('not Even Tue EMaths')} data-grid={{x: 2, y: 5, w: 1, h: 1, static: true}}>Mathematics</div>
-        <div key="e2" className={this.getClass('not Even Tue Malay')} data-grid={{x: 2, y: 6, w: 1, h: 1, static: true}}>Malay</div>
-        <div key="f2" className={this.getClass('not Even Tue Mon BioL')} data-grid={{x: 2, y: 7, w: 1, h: 2, static: true}}>Biology</div>
-        <div key="g2" className={this.getClass('Tue Makan')} data-grid={{x: 2, y: 9, w: 1, h: 1, static: true}}>LUNCH</div>
-        <div key="h2" className={this.getClass('not Even Tue Bio')} data-grid={{x: 2, y: 10, w: 1, h: 2, static: true}}>Biology (m/u)</div>
+        <div key="d2" className={this.getClass('not Even Tue EMaths')} data-grid={{x: 2, y: 5, w: 1, h: 1, static: true}}>
+          {/* Mathematics</div>
+          <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('not Even Tue EMaths')}>Mathematics</span>
+          </ScaleText>
+        </div>
+        <div key="e2" className={this.getClass('not Even Tue Malay')} data-grid={{x: 2, y: 6, w: 1, h: 1, static: true}}>
+          {/* </div>
+          <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('not Even Tue Malay')}>Malay</span>
+          </ScaleText>
+        </div>
+        <div key="f2" className={this.getClass('not Even Tue Mon BioL')} data-grid={{x: 2, y: 7, w: 1, h: 2, static: true}}>
+          {/* </div>
+          <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('not Even Tue BioL')}>Biology</span>
+          </ScaleText>
+        </div>
+        <div key="g2" className={this.getClass('Tue Makan')} data-grid={{x: 2, y: 9, w: 1, h: 1, static: true}}>
+          {/* </div>
+          <div key="a" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('not Even Tue Makan')}>LUNCH</span>
+          </ScaleText>
+        </div>
+        <div key="h2" className={this.getClass('not Even Tue Bio')} data-grid={{x: 2, y: 10, w: 1, h: 2, static: true}}>
+          {/* </div>
+          <div key="a" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('not Even Tue Bio')}>Biology (m/u)</span>
+          </ScaleText>
+        </div>
 
         <div key="weT" className={this.getClass('Wednesday')} data-grid={{x: 3, y: 0, w: 1, h: 1, static: true}}>Wednesday</div>
         {/* <div key="c2" data-grid={{x: 2, y: 3, w: 5, h: 1, static: true}}>c</div> */}
@@ -1093,10 +1410,34 @@ export default class MyFirstGrid extends React.Component {
           <span className={this.getClass('not Even Wed EMaths')}>Mathematics</span>
           </ScaleText>
         </div>
-        <div key="f3" className={this.getClass('not Even Wed Chem')} data-grid={{x: 3, y: 6, w: 1, h: 1, static: true}}>Chemistry</div>
-        <div key="g3" className={this.getClass('not Even Wed Mon PE')} data-grid={{x: 3, y: 7, w: 1, h: 1, static: true}}>Physical Ed</div>
-        <div key="i3" className={this.getClass('not Even Wed Makan')} data-grid={{x: 3, y: 9, w: 1, h: 1, static: true}}>LUNCH</div>
-        <div key="j3" className={this.getClass('not Even Wed Malay')} data-grid={{x: 3, y: 10, w: 1, h: 1, static: true}}>Malay</div>
+        <div key="f3" className={this.getClass('not Even Wed Chem')} data-grid={{x: 3, y: 6, w: 1, h: 1, static: true}}>
+          {/* </div>
+          <div key="a" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('not Even Wed Chem')}>Chemistry</span>
+          </ScaleText>
+        </div>
+        <div key="g3" className={this.getClass('not Even Wed Mon PE')} data-grid={{x: 3, y: 7, w: 1, h: 1, static: true}}>
+          {/* </div>
+          <div key="a" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('not Even Wed PE')}>Physical Ed</span>
+          </ScaleText>
+        </div>
+        <div key="i3" className={this.getClass('not Even Wed Makan')} data-grid={{x: 3, y: 9, w: 1, h: 1, static: true}}>
+          {/* </div>
+          <div key="a" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('not Even Wed Makan')}>LUNCH</span>
+          </ScaleText>
+        </div>
+        <div key="j3" className={this.getClass('not Even Wed Malay')} data-grid={{x: 3, y: 10, w: 1, h: 1, static: true}}>
+          {/* </div>
+          <div key="a" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('not Even Wed Malay')}>Malay</span>
+          </ScaleText>
+        </div>
         <div key="k3" className={this.getClass('not Even Wed Hist')} data-grid={{x: 3, y: 11, w: 1, h: 1, static: true}}>
           {/* </div>
           <div key="a" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}> */}
@@ -1136,13 +1477,43 @@ export default class MyFirstGrid extends React.Component {
           <span className={this.getClass('not Even Thu Eng')}>English</span>
           </ScaleText>
         </div>
-        <div key="f4" className={this.getClass('not Even Thu EMaths')} data-grid={{x: 4, y: 6, w: 1, h: 1, static: true}}>Mathematics</div>
-        <div key="g4" className={this.getClass('not Even Thu Makan')} data-grid={{x: 4, y: 7, w: 1, h: 1, static: true}}>LUNCH</div>
-        <div key="h4" className={this.getClass('not Even Thu PE')} data-grid={{x: 4, y: 8, w: 1, h: 2, static: true}}>Physical Ed</div>
-        <div key="i4" className={this.getClass('not Even Thu AMaths')} data-grid={{x: 4, y: 10, w: 1, h: 2, static: true}}>Add Maths</div>
+        <div key="f4" className={this.getClass('not Even Thu EMaths')} data-grid={{x: 4, y: 6, w: 1, h: 1, static: true}}>
+          {/* </div>
+          <div key="a" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('not Even Thu EMaths')}>Mathematics</span>
+          </ScaleText>
+        </div>
+        <div key="g4" className={this.getClass('not Even Thu Makan')} data-grid={{x: 4, y: 7, w: 1, h: 1, static: true}}>
+          {/* </div>
+          <div key="a" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('not Even Thu Makan')}>LUNCH</span>
+          </ScaleText>
+        </div>
+        <div key="h4" className={this.getClass('not Even Thu PE')} data-grid={{x: 4, y: 8, w: 1, h: 2, static: true}}>
+          {/* </div>
+          <div key="a" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('not Even Thu PE')}>Physical Ed</span>
+          </ScaleText>
+        </div>
+        <div key="i4" className={this.getClass('not Even Thu AMaths')} data-grid={{x: 4, y: 10, w: 1, h: 2, static: true}}>
+          {/* </div>
+          <div key="a" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('not Even Thu AMaths')}>Add Maths</span>
+          </ScaleText>
+        </div>
 
         <div key="frT" className={this.getClass('Friday')} data-grid={{x: 5, y: 0, w: 1, h: 1, static: true}}>Friday</div>
-        <div key="a5" className={this.getClass('not Even Fri Eng')} data-grid={{x: 5, y: 1, w: 1, h: 2, static: true}}>English</div>
+        <div key="a5" className={this.getClass('not Even Fri Eng')} data-grid={{x: 5, y: 1, w: 1, h: 2, static: true}}>
+          {/* </div>
+          <div key="a" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className={this.getClass('not Even Fri Eng')}>English</span>
+          </ScaleText>
+        </div>
         <div key="b5" className={this.getClass('not Even Fri Hist')} data-grid={{x: 5, y: 3, w: 1, h: 1, static: true}}>
           {/* History</div>
           <div key="a" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}> */}
@@ -1150,6 +1521,11 @@ export default class MyFirstGrid extends React.Component {
           <span className={this.getClass('not Even Fri Hist')}>History</span>
           </ScaleText>
         </div>
+        {/* <div key="c2" data-grid={{x: 2, y: 3, w: 5, h: 1, static: true}}>c</div> */}
+        <div key="d5" className={this.getClass('not Even Fri SS')} data-grid={{x: 5, y: 5, w: 1, h: 1, static: true}}>Social Studies</div>
+        <div key="e5" className={this.getClass('not Even Fri Makan')} data-grid={{x: 5, y: 6, w: 1, h: 1, static: true}}>LUNCH</div>
+        <div key="f5" className={this.getClass('not Even Fri Chem')} data-grid={{x: 5, y: 7, w: 1, h: 1, static: true}}>Chemistry</div>
+        <div key="g5" className={this.getClass('not Even Fri Bio')} data-grid={{x: 5, y: 8, w: 1, h: 1, static: true}}>Biology</div>
 
         <div key="az" className={this.getTimeClass('0750')} data-grid={{x: 6, y: 1, w: 1, h: 1, static: true}}>
           {/* 7:50am</div>
@@ -1158,7 +1534,7 @@ export default class MyFirstGrid extends React.Component {
           <span className="Time">7:50am</span>
           </ScaleText>
         </div>
-        <div key="bz" className={this.getTimeClass('0830')} data-grid={{x: 6, y: 2, w: 1, h: 1, static: true}}>
+        <div key="bz" className="Time" data-grid={{x: 6, y: 2, w: 1, h: 1, static: true}}>
           {/* 8:30am</div>
           <div key="a" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}> */}
           <ScaleText maxFontSize={20}>
@@ -1172,18 +1548,36 @@ export default class MyFirstGrid extends React.Component {
           <span className="Time">9:10am</span>
           </ScaleText>
         </div>
-        <div key="dz" className={this.getTimeClass('0950')} data-grid={{x: 6, y: 4, w: 1, h: 1, static: true}}>9:50am</div>
-        <div key="ez" className={this.getTimeClass('1000')} data-grid={{x: 6, y: 5, w: 1, h: 1, static: true}}>10:00am</div>
-        <div key="fz" className={this.getTimeClass('1040')} data-grid={{x: 6, y: 6, w: 1, h: 1, static: true}}>10:40am</div>
-        <div key="gz" className={this.getTimeClass('1120')} data-grid={{x: 6, y: 7, w: 1, h: 1, static: true}}>11:20am</div>
-        <div key="hz" className={this.getTimeClass('1200')} data-grid={{x: 6, y: 8, w: 1, h: 1, static: true}}>12:00nn</div>
-        <div key="iz" className={this.getTimeClass('1240')} data-grid={{x: 6, y: 9, w: 1, h: 1, static: true}}>12:40pm</div>
-        <div key="jz" className={this.getTimeClass('1320')} data-grid={{x: 6, y: 10, w: 1, h: 1, static: true}}>1:20pm</div>
-        <div key="kz" className={this.getTimeClass('1400')} data-grid={{x: 6, y: 11, w: 1, h: 1, static: true}}>2:00pm</div>
-        <div key="lz" className={this.getTimeClass('1440')} data-grid={{x: 6, y: 12, w: 1, h: 1, static: true}}>2:40pm</div>
-        <div key="mz" className={this.getTimeClass('1500')} data-grid={{x: 6, y: 13, w: 1, h: 1, static: true}}>3:00pm</div>
-        <div key="nz" className={this.getTimeClass('1600')} data-grid={{x: 6, y: 14, w: 1, h: 1, static: true}}>4:00pm</div>
-      </ReactGridLayout>
+        <div key="dz" className="Time" data-grid={{x: 6, y: 4, w: 1, h: 1, static: true}}>
+          {/* 9:50am</div>
+          <div key="a" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className="Time">9:50am</span>
+          </ScaleText>
+        </div>
+        <div key="ez" className="Time" data-grid={{x: 6, y: 5, w: 1, h: 1, static: true}}>
+          {/* 10:00am</div>
+          <div key="a" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className="Time">10:00am</span>
+          </ScaleText>
+        </div>
+        <div key="fz" className="Time" data-grid={{x: 6, y: 6, w: 1, h: 1, static: true}}>
+          {/* 10:40am</div>
+          <div key="a" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}> */}
+          <ScaleText maxFontSize={20}>
+          <span className="Time">10:40am</span>
+          </ScaleText>
+        </div>
+        <div key="gz" className="Time" data-grid={{x: 6, y: 7, w: 1, h: 1, static: true}}>11:20am</div>
+        <div key="hz" className="Time" data-grid={{x: 6, y: 8, w: 1, h: 1, static: true}}>12:00nn</div>
+        <div key="iz" className="Time" data-grid={{x: 6, y: 9, w: 1, h: 1, static: true}}>12:40pm</div>
+        <div key="jz" className="Time" data-grid={{x: 6, y: 10, w: 1, h: 1, static: true}}>1:20pm</div>
+        <div key="kz" className="Time" data-grid={{x: 6, y: 11, w: 1, h: 1, static: true}}>2:00pm</div>
+        <div key="lz" className="Time" data-grid={{x: 6, y: 12, w: 1, h: 1, static: true}}>2:40pm</div>
+        <div key="mz" className="Time" data-grid={{x: 6, y: 13, w: 1, h: 1, static: true}}>3:00pm</div>
+        <div key="nz" className="Time" data-grid={{x: 6, y: 14, w: 1, h: 1, static: true}}>4:00pm</div>
+      </ReactGridLayout> {/* key="ONextE" className={this.getLayoutClass('Even')} */}
       <ReactGridLayout key="ENextO" className={this.getLayoutClass('Odd')} cols={7} rowHeight={30} width={1200}>
         {/* <div key="0T" className={this.getClass('0T')} data-grid={{x: 0, y: 0, w: 1, h: 1, static: true}}>{this.state.dateTdy}</div> */}
         <div key="0T" data-grid={{x: 0, y: 0, w: 1, h: 1, static: true}}>Even Week</div>
@@ -1295,71 +1689,71 @@ export default class MyFirstGrid extends React.Component {
           </ScaleText>
         </div>
         {/* <div key="ao1" className={this.getClass('Odd Mon AMaths')} data-grid={{x: 1, y: 1, w: 1, h: 1, static: true}}>Add Maths</div> */}
-        <div key="a1" className={this.getClass('not Odd Mon SS')} data-grid={{x: 1, y: 1, w: 1, h: 1, static: true}}>
+        <div key="a1" className={this.getClass('not Odd SS')} data-grid={{x: 1, y: 1, w: 1, h: 1, static: true}}>
           {/* </div>
           <div key="a" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}> */}
           <ScaleText maxFontSize={20}>
-          <span className={this.getClass('not Odd Mon SS')}>Social Studies</span>
+          <span className={this.getClass('not Odd SS')}>Social Studies</span>
           </ScaleText>
         </div>
         {/* <div key="b1" data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}>boM</div> */}
-        <div key="b1" className={this.getClass('not Odd Mon Bio')} data-grid={{x: 1, y: 2, w: 1, h: 1, static: true}}>
+        <div key="b1" className={this.getClass('not Odd Bio')} data-grid={{x: 1, y: 2, w: 1, h: 1, static: true}}>
           {/* </div>
           <div key="a" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}> */}
           <ScaleText maxFontSize={20}>
           <span className={this.getClass('not Odd Mon Bio')}>Biology</span>
           </ScaleText>
         </div>
-        <div key="c1" className={this.getClass('not Odd Mon EMaths')} data-grid={{x: 1, y: 3, w: 1, h: 1, static: true}}>
+        <div key="c1" className={this.getClass('not Odd EMaths')} data-grid={{x: 1, y: 3, w: 1, h: 1, static: true}}>
           {/* </div>
           <div key="a" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}> */}
           <ScaleText maxFontSize={20}>
           <span className={this.getClass('not Odd Mon EMaths')}>Mathematics</span>
           </ScaleText>
         </div>
-        <div key="d1" className={this.getClass('not Odd Mon Makan')} data-grid={{x: 1, y: 4, w: 5, h: 1, static: true}}>
+        <div key="d1" className={this.getClass('not Odd Makan')} data-grid={{x: 1, y: 4, w: 5, h: 1, static: true}}>
           {/* </div>
           <div key="a" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}> */}
           <ScaleText maxFontSize={20}>
           <span className={this.getClass('not Odd Mon Makan')}>B R E A K</span>
           </ScaleText>
         </div>
-        <div key="e1" className={this.getClass('not Odd Mon AMaths')} data-grid={{x: 1, y: 5, w: 1, h: 1, static: true}}>
+        <div key="e1" className={this.getClass('not Odd AMaths')} data-grid={{x: 1, y: 5, w: 1, h: 1, static: true}}>
           {/* </div>
           <div key="a" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}> */}
           <ScaleText maxFontSize={20}>
           <span className={this.getClass('not Odd Mon AMaths')}>Add Maths</span>
           </ScaleText>
         </div>
-        <div key="f1" className={this.getClass('not Odd Mon Makan')} data-grid={{x: 1, y: 6, w: 1, h: 1, static: true}}>
+        <div key="f1" className={this.getClass('not Odd Makan')} data-grid={{x: 1, y: 6, w: 1, h: 1, static: true}}>
           {/* </div>
           <div key="a" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}> */}
           <ScaleText maxFontSize={20}>
           <span className={this.getClass('not Odd Mon Makan')}>LUNCH</span>
           </ScaleText>
         </div>
-        <div key="g1" className={this.getClass('not Odd Mon ChemL')} data-grid={{x: 1, y: 7, w: 1, h: 2, static: true}}>
+        <div key="g1" className={this.getClass('not Odd ChemL')} data-grid={{x: 1, y: 7, w: 1, h: 2, static: true}}>
           {/* </div>
           <div key="a" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}> */}
           <ScaleText maxFontSize={20}>
           <span className={this.getClass('not Odd Mon ChemL')}>Chemistry (Lab)</span>
           </ScaleText>
         </div>
-        <div key="h1" className={this.getClass('not Odd Mon Malay')} data-grid={{x: 1, y: 9, w: 1, h: 2, static: true}}>
+        <div key="h1" className={this.getClass('not Odd Malay')} data-grid={{x: 1, y: 9, w: 1, h: 2, static: true}}>
           {/* </div>
           <div key="a" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}> */}
           <ScaleText maxFontSize={20}>
           <span className={this.getClass('not Odd Mon Malay')}>Malay</span>
           </ScaleText>
         </div>
-        <div key="i1" className={this.getClass('not Odd Mon Bio')} data-grid={{x: 1, y: 11, w: 1, h: 2, static: true}}>
+        <div key="i1" className={this.getClass('not Odd Bio')} data-grid={{x: 1, y: 11, w: 1, h: 2, static: true}}>
           {/* </div>
           <div key="a" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}> */}
           <ScaleText maxFontSize={20}>
           <span className={this.getClass('not Odd Mon Bio')}>Biology (m/u)</span>
           </ScaleText>
         </div>
-        <div key="j1" className={this.getClass('not Odd Mon Malay')} data-grid={{x: 1, y: 13, w: 1, h: 1, static: true}}>
+        <div key="j1" className={this.getClass('not Odd Malay')} data-grid={{x: 1, y: 13, w: 1, h: 1, static: true}}>
           {/* </div>
           <div key="a" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}> */}
           <ScaleText maxFontSize={20}>
@@ -1376,7 +1770,7 @@ export default class MyFirstGrid extends React.Component {
         </div>
         {/* <div key="c2" data-grid={{x: 2, y: 3, w: 5, h: 1, static: true}}>c</div> */}
         {/* <div key="c2" data-grid={{x: 2, y: 3, w: 5, h: 1, static: true}}>c</div> */}
-        <div key="a2" className={this.getClass('not Odd Tue PE')} data-grid={{x: 2, y: 1, w: 1, h: 1, static: true}}>
+        <div key="a2" className={this.getClass('not Odd PE')} data-grid={{x: 2, y: 1, w: 1, h: 1, static: true}}>
           {/* Ed</div>
           <div key="a" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}> */}
           <ScaleText maxFontSize={20}>
