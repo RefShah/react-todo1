@@ -1,6 +1,18 @@
 import React from "react";
 import _ from "lodash";
 import RGL, { WidthProvider } from "react-grid-layout";
+import {
+  BrowserView,
+  MobileView,
+  AndroidView,
+  isDesktop,
+  isMacOs,
+  isBrowser,
+  isMobile,
+  isAndroid,
+  isIOS,
+  IOSView
+} from "react-device-detect";
 
 // moving the css here did it
 import "../css/styles.css";
@@ -99,6 +111,7 @@ export default class MyFirstGrid extends React.Component {
         // if (date.getDay() !== 4) {
         //   date.setMonth(0, 1 + ((4 - date.getDay()) + 7) % 7);
         // }
+        // Not a Monday? Correct the date to the next Monday
         if (date.getDay() !== 1) {
           date.setMonth(0, 1 + ((1 - date.getDay()) + 7) % 7);
         }
@@ -197,12 +210,6 @@ export default class MyFirstGrid extends React.Component {
         (key.includes("Odd") && !this.state.isOdd)) {
       temp = temp + "oeHide ";
     };
-    // if (key.includes("Bio")) {
-    //   temp = temp + "Bio ";
-    // };
-    // if (key.includes("EMaths")) {
-    //   temp = temp + "Bio ";
-    // };
     // console.log('K1: ', temp + key);
     return temp + key;
   };
@@ -336,8 +343,6 @@ export default class MyFirstGrid extends React.Component {
           </ScaleText>
         </div>
         <div key="n" className={this.getTimeClass('1600')} data-grid={{x: 0, y: 14, w: 1, h: 1, static: true}}>
-          {/* 4:00pm</div>
-          <div key="a" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}> */}
           <ScaleText maxFontSize={20}>
           <span className="Time">4:00pm</span>
           </ScaleText>
@@ -405,8 +410,6 @@ export default class MyFirstGrid extends React.Component {
         </div>
 
         <div key="tuT" className={this.getClass('Tuesday')} data-grid={{x: 2, y: 0, w: 1, h: 1, static: true}}>
-          {/* tu</div>
-          <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
           <ScaleText maxFontSize={20}>
           <span className={this.getClass('Tuesday')}>Tuesday</span>
           </ScaleText>
@@ -441,8 +444,6 @@ export default class MyFirstGrid extends React.Component {
           </ScaleText>
         </div>
         <div key="f2" className={this.getClass('Odd Tue BioL')} data-grid={{x: 2, y: 7, w: 1, h: 2, static: true}}>
-          {/* </div>
-          <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
           <ScaleText maxFontSize={20}>
           <span className={this.getClass('Odd Tue BioL')}>Biology (Lab)</span>
           </ScaleText>
@@ -510,7 +511,7 @@ export default class MyFirstGrid extends React.Component {
           {/* </div>
           <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
           <ScaleText maxFontSize={20}>
-          <span className={this.getClass('Odd Wed Makan')}>LUNCH</span>
+          <span className={this.getClass('Odd Makan')}>LUNCH</span>
           </ScaleText>
         </div>
         <div key="j3" className={this.getClass('Odd Wed Malay')} data-grid={{x: 3, y: 10, w: 1, h: 1, static: true}}>
@@ -543,7 +544,7 @@ export default class MyFirstGrid extends React.Component {
           {/* </div>
           <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
           <ScaleText maxFontSize={20}>
-          <span className={this.getClass('Odd Thu Asmb')}>Assembly</span>
+          <span className={this.getClass('Odd Asmb')}>Assembly</span>
           </ScaleText>
         </div>
         {/* <div key="c2" data-grid={{x: 2, y: 3, w: 5, h: 1, static: true}}>c</div> */}
@@ -690,8 +691,6 @@ export default class MyFirstGrid extends React.Component {
           </ScaleText>
         </div>
         <div key="jz" className={this.getTimeClass('1320')} data-grid={{x: 6, y: 10, w: 1, h: 1, static: true}}>
-          {/* 1:20pm</div>
-          <div key="az" className={this.getTimeClass('0750')} data-grid={{x: 6, y: 1, w: 1, h: 1, static: true}}> */}
           <ScaleText maxFontSize={20}>
           <span className="Time">1:20pm</span>
           </ScaleText>
@@ -847,7 +846,7 @@ export default class MyFirstGrid extends React.Component {
         </div>
         <div key="f1" className={this.getClass('Even Mon Makan')} data-grid={{x: 1, y: 6, w: 1, h: 1, static: true}}>
           <ScaleText maxFontSize={20}>
-          <span className={this.getClass('Even')}>LUNCH</span>
+          <span className="Even">LUNCH</span>
           </ScaleText>
         </div>
         <div key="g1" className={this.getClass('Even Mon ChemL')} data-grid={{x: 1, y: 7, w: 1, h: 2, static: true}}>
@@ -911,8 +910,6 @@ export default class MyFirstGrid extends React.Component {
           </ScaleText>
         </div>
         <div key="e2" className={this.getClass('Even Tue Hist')} data-grid={{x: 2, y: 6, w: 1, h: 2, static: true}}>
-          {/* History</div>
-        <div key="b2" className={this.getClass('Even Tue EMaths')} data-grid={{x: 2, y: 2, w: 1, h: 2, static: true}}> */}
           <ScaleText maxFontSize={20}>
           <span className={this.getClass('Even Tue EMaths')}>History</span>
           </ScaleText>
@@ -941,7 +938,7 @@ export default class MyFirstGrid extends React.Component {
         <div key="a3" data-grid={{x: 3, y: 1, w: 1, h: 1, static: true}}>aW</div>
         <div key="b3" className={this.getClass('Even Wed Hist')} data-grid={{x: 3, y: 2, w: 1, h: 1, static: true}}>
           <ScaleText maxFontSize={20}>
-          <span className={this.getClass('Even Wed Hist')}>History</span>
+          <span className={this.getClass('Even')}>History</span>
           </ScaleText>
         </div>
         {/* <div key="c2" data-grid={{x: 2, y: 3, w: 5, h: 1, static: true}}>c</div> */}
@@ -952,7 +949,7 @@ export default class MyFirstGrid extends React.Component {
         </div>
         <div key="e3" className={this.getClass('Even Wed Eng')} data-grid={{x: 3, y: 5, w: 1, h: 1, static: true}}>
           <ScaleText maxFontSize={20}>
-          <span className={this.getClass('Even Wed Eng')}>English</span>
+          <span className={this.getClass('Even')}>English</span>
           </ScaleText>
         </div>
         <div key="f3" className={this.getClass('Even Wed AMaths')} data-grid={{x: 3, y: 6, w: 1, h: 1, static: true}}>
@@ -1007,7 +1004,7 @@ export default class MyFirstGrid extends React.Component {
           {/* </div>
           <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
           <ScaleText maxFontSize={20}>
-          <span className={this.getClass('Even EMaths')}>Mathematics</span>
+          <span className={this.getClass('Even')}>Mathematics</span>
           </ScaleText>
         </div>
         <div key="e4" className={this.getClass('Even Thu Chem')} data-grid={{x: 4, y: 5, w: 1, h: 1, static: true}}>
@@ -1021,7 +1018,7 @@ export default class MyFirstGrid extends React.Component {
           {/* </div>
           <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
           <ScaleText maxFontSize={20}>
-          <span className={this.getClass('Even Thu')}>Add Maths</span>
+          <span className={this.getClass('Even')}>Add Maths</span>
           </ScaleText>
         </div>
         <div key="g4" className={this.getClass('Even Thu Makan')} data-grid={{x: 4, y: 8, w: 1, h: 1, static: true}}>
@@ -1207,7 +1204,7 @@ export default class MyFirstGrid extends React.Component {
         </div>
         <div key="j" data-grid={{x: 0, y: 10, w: 1, h: 1, static: true}}>
           <ScaleText maxFontSize={20}>
-          <span className={this.getClass('Time 0950')}>1:20pm</span>
+          <span className={this.getClass('Time')}>1:20pm</span>
           </ScaleText>
         </div>
         <div key="k" data-grid={{x: 0, y: 11, w: 1, h: 1, static: true}}>
@@ -1221,7 +1218,7 @@ export default class MyFirstGrid extends React.Component {
           {/* 2:40pm</div>
           <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
           <ScaleText maxFontSize={20}>
-          <span className={this.getClass('Time 0950')}>2:40pm</span>
+          <span className={this.getClass('Time')}>2:40pm</span>
           </ScaleText>
         </div>
         <div key="m" data-grid={{x: 0, y: 13, w: 1, h: 1, static: true}}>
@@ -1247,8 +1244,6 @@ export default class MyFirstGrid extends React.Component {
           </ScaleText>
         </div>
         <div key="ao1" className={this.getClass('not Even AMaths')} data-grid={{x: 1, y: 1, w: 1, h: 1, static: true}}>
-          {/* </div>
-          <div key="b1" className={this.getClass('Odd Mon Malay')} data-grid={{x: 1, y: 2, w: 1, h: 2, static: true}}> */}
           <ScaleText maxFontSize={20}>
           <span className={this.getClass('not Even')}>Add Maths</span>
           </ScaleText>
@@ -1262,7 +1257,7 @@ export default class MyFirstGrid extends React.Component {
         </div>
         <div key="d1" className={this.getClass('not Even Mon Makan')} data-grid={{x: 1, y: 4, w: 5, h: 1, static: true}}>
           <ScaleText maxFontSize={20}>
-          <span className={this.getClass('not Even Mon Makan')}>B R E A K</span>
+          <span className={this.getClass('not Even')}>B R E A K</span>
           </ScaleText>
         </div>
         <div key="e1" className={this.getClass('not Even Eng')} data-grid={{x: 1, y: 5, w: 1, h: 1, static: true}}>
@@ -1277,7 +1272,7 @@ export default class MyFirstGrid extends React.Component {
         </div>
         <div key="g1" className={this.getClass('not Even ChemL')} data-grid={{x: 1, y: 7, w: 1, h: 2, static: true}}>
           <ScaleText maxFontSize={20}>
-          <span className={this.getClass('not Even Mon ChemL')}>Chemistry (Lab)</span>
+          <span className={this.getClass('not Even')}>Chemistry (Lab)</span>
           </ScaleText>
         </div>
         <div key="h1" className={this.getClass('not Even Malay')} data-grid={{x: 1, y: 9, w: 1, h: 1, static: true}}>
@@ -1298,7 +1293,6 @@ export default class MyFirstGrid extends React.Component {
           <span className={this.getClass('not Even')}>Tuesday</span>
           </ScaleText>
         </div>
-        {/* <div key="c2" data-grid={{x: 2, y: 3, w: 5, h: 1, static: true}}>c</div> */}
         {/* <div key="c2" data-grid={{x: 2, y: 3, w: 5, h: 1, static: true}}>c</div> */}
         <div key="a2" className={this.getClass('not Even SS')} data-grid={{x: 2, y: 1, w: 1, h: 2, static: true}}>
         {/* </div>
@@ -1358,7 +1352,7 @@ export default class MyFirstGrid extends React.Component {
           {/* </div>
           <div key="a" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}> */}
           <ScaleText maxFontSize={20}>
-          <span className={this.getClass('not Even Wed AMaths')}>Add Maths</span>
+          <span className={this.getClass('not Even')}>Add Maths</span>
           </ScaleText>
         </div>
         {/* <div key="c2" data-grid={{x: 2, y: 3, w: 5, h: 1, static: true}}>c</div> */}
@@ -1430,7 +1424,7 @@ export default class MyFirstGrid extends React.Component {
           <span className={this.getClass('not Even Thu Eng')}>English</span>
           </ScaleText>
         </div>
-        <div key="e4" className={this.getClass('not Even Thu Eng')} data-grid={{x: 4, y: 5, w: 1, h: 1, static: true}}>
+        <div key="e4" className={this.getClass('not Even Eng')} data-grid={{x: 4, y: 5, w: 1, h: 1, static: true}}>
           <ScaleText maxFontSize={20}>
           <span className={this.getClass('not Even Thu Eng')}>English</span>
           </ScaleText>
@@ -1480,7 +1474,7 @@ export default class MyFirstGrid extends React.Component {
           </ScaleText>
         </div>
         {/* <div key="c2" data-grid={{x: 2, y: 3, w: 5, h: 1, static: true}}>c</div> */}
-        <div key="d5" className={this.getClass('not Even Fri SS')} data-grid={{x: 5, y: 5, w: 1, h: 1, static: true}}>
+        <div key="d5" className={this.getClass('not Even SS')} data-grid={{x: 5, y: 5, w: 1, h: 1, static: true}}>
           {/* </div>
           <div key="a" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}> */}
           <ScaleText maxFontSize={20}>
@@ -1495,8 +1489,6 @@ export default class MyFirstGrid extends React.Component {
           </ScaleText>
         </div>
         <div key="f5" className={this.getClass('not Even Chem')} data-grid={{x: 5, y: 7, w: 1, h: 1, static: true}}>
-          {/* </div>
-          <div key="a" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}> */}
           <ScaleText maxFontSize={20}>
           <span className={this.getClass('not Even')}>Chemistry</span>
           </ScaleText>
@@ -1697,8 +1689,6 @@ export default class MyFirstGrid extends React.Component {
         </div>
         {/* <div key="ao1" className={this.getClass('Odd Mon AMaths')} data-grid={{x: 1, y: 1, w: 1, h: 1, static: true}}>Add Maths</div> */}
         <div key="a1" className={this.getClass('not Odd SS')} data-grid={{x: 1, y: 1, w: 1, h: 1, static: true}}>
-          {/* </div>
-          <div key="a" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}> */}
           <ScaleText maxFontSize={20}>
           <span>Social Studies</span>
           </ScaleText>
@@ -1752,8 +1742,6 @@ export default class MyFirstGrid extends React.Component {
           </ScaleText>
         </div>
         <div key="i1" className={this.getClass('not Odd Bio')} data-grid={{x: 1, y: 11, w: 1, h: 2, static: true}}>
-          {/* </div>
-          <div key="a" className={this.getTimeClass('0750')} data-grid={{x: 0, y: 1, w: 1, h: 1, static: true}}> */}
           <ScaleText maxFontSize={20}>
           <span className={this.getClass('not Odd Mon Bio')}>Biology (m/u)</span>
           </ScaleText>
@@ -2056,7 +2044,20 @@ export default class MyFirstGrid extends React.Component {
           </ScaleText>
         </div>
       </ReactGridLayout>
-      </div>    )
+      <BrowserView>
+              <h3> This text is rendered only in browser </h3>
+          </BrowserView>
+          <MobileView>
+              <h3> This text is rendered only on mobile </h3>
+          </MobileView>
+          <AndroidView>
+              <h3> This text is rendered only on Android </h3>
+          </AndroidView>
+          <IOSView>
+              <h3> This text is rendered only on iOS </h3>
+          </IOSView>
+      </div>    
+    )
   }
 }
 
